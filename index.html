@@ -1,0 +1,60 @@
+<html>
+  <head>
+    <title>Multiplayer Demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css" type="text/css">
+    <link rel="stylesheet" href="/game-ui.css" type="text/css">
+  </head>
+  <body>
+
+    <div class="game-container"></div>
+
+    <div class="player-info">
+      <div>
+        <label for="player-name">Your Name</label>
+        <input id="player-name" maxlength="10" type="text" />
+      </div>
+      <div>
+        <button id="player-color">Change Color</button>
+      </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+
+    <script src="/env-config.js"></script>
+    <script src="/dev-config.js"></script>
+
+    <script>
+      const envConfig = getEnvironmentConfig();
+      
+      const firebaseConfig = {
+        apiKey: envConfig.FIREBASE_API_KEY,
+        authDomain: envConfig.FIREBASE_AUTH_DOMAIN,
+        databaseURL: envConfig.FIREBASE_DATABASE_URL,
+        projectId: envConfig.FIREBASE_PROJECT_ID,
+        storageBucket: envConfig.FIREBASE_STORAGE_BUCKET,
+        messagingSenderId: envConfig.FIREBASE_MESSAGING_SENDER_ID,
+        appId: envConfig.FIREBASE_APP_ID,
+        measurementId: envConfig.FIREBASE_MEASUREMENT_ID
+      };
+
+      const requiredKeys = ['apiKey', 'authDomain', 'databaseURL', 'projectId'];
+      const missingKeys = requiredKeys.filter(key => !firebaseConfig[key]);
+      
+      if (missingKeys.length > 0) {
+        console.error('Missing Firebase configuration:', missingKeys);
+        alert('Firebase configuration is missing. Please check your environment setup.');
+      } else {
+        firebase.initializeApp(firebaseConfig);
+      }
+    </script>
+
+    <script src="/KeyPressListener.js"></script>
+    <script src="/app.js"></script>
+
+  </body>
+</html>
