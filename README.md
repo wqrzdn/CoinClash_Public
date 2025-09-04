@@ -2,7 +2,7 @@
 
 **Coin Clash** is a fast-paced real-time multiplayer browser game where players collect bronze, silver, and gold coins, avoid deadly hazard zones, express themselves with emotes, chat in real-time, and compete to dominate the leaderboard.
 
-## 🚀 Features
+##  Features
 
 - Multiplayer gameplay using Firebase Realtime Database  
 - Player health system with hazard zones and respawn logic  
@@ -13,17 +13,17 @@
 - Idle detection with animations and visual feedback  
 - Responsive, pixel-art styled UI with health bars, hazard indicators, and chat box  
 
-## 🛠 Tech Stack
+##  Tech Stack
 
 - **Frontend:** HTML, CSS, JavaScript  
 - **Backend:** Firebase (Realtime Database & Authentication)  
 - **Hosting:** GitHub + Render *(or Firebase Hosting)*  
 
-## 🔗 Live Demo
+##  Live Demo
 
 [https://coinclash.onrender.com](https://coinclash.onrender.com)
 
-## 🔒 Security Setup
+##  Security Setup
 
 This project uses environment variables for sensitive configuration. Before running:
 
@@ -35,14 +35,14 @@ This project uses environment variables for sensitive configuration. Before runn
 
 ---
 
-### ✍️ Resume Line Example
+###  Resume Line Example
 
 > **Coin Clash** – Real-time Multiplayer Browser Game (JavaScript & Firebase)  
 > Developed a fast-paced multiplayer game featuring real-time Firebase integration, dynamic coin collection, hazard zones, health management, chat, emotes, leaderboard, and responsive pixel-art UI.
 
 ---
 
-### 📁 Project Structure
+###  Project Structure
 
 /app.js
 /index.html
