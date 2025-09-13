@@ -21,7 +21,7 @@
 
 ##  Live Demo
 
-[https://coinclash.onrender.com](https://coinclash.onrender.com)
+[https://coinsclash.onrender.com](https://coinsclash.onrender.com)
 
 ##  Security Setup
 
